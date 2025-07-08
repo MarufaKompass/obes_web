@@ -13,8 +13,8 @@ import doctors8 from "../../../public/images/home/doctors8.jpg";
 const employees = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    position: "Cardiologist",
+    name: "Dr. Tahniyah Haq",
+    position: "Endocrinologist",
     department: "Heart & Vascular",
     email: "sarah.j@company.com",
     phone: "+1 (555) 123-4567",
@@ -23,8 +23,8 @@ const employees = [
   },
   {
     id: 2,
-    name: "Michael Chen",
-    position: "Electrophysiologist",
+    name: "Dr. Mohammad Shah Alam",
+    position: "Endocrinologist",
     department: "Heart Rhythm Disorders",
     email: "michael.c@company.com",
     phone: "+1 (555) 234-5678",
@@ -33,8 +33,8 @@ const employees = [
   },
   {
     id: 3,
-    name: "Emily Rodriguez",
-    position: "Neurologist",
+    name: "Dr. Nazma Akter",
+    position: "Endocrinologist",
     department: "Brain & Nervous System",
     email: "emily.r@company.com",
     phone: "+1 (555) 345-6789",
@@ -43,8 +43,8 @@ const employees = [
   },
   {
     id: 4,
-    name: "David Kim",
-    position: "Neurosurgeon ",
+    name: "Dr. Shahjada Selim",
+    position: "Endocrinologist ",
     department: "Brain & Spine Surgery",
     email: "david.k@company.com",
     phone: "+1 (555) 456-7890",
@@ -53,8 +53,8 @@ const employees = [
   },
   {
     id: 5,
-    name: "Lisa Thompson",
-    position: "Pulmonologist",
+    name: "Dr. Marufa Mustari",
+    position: "Endocrinologist",
     department: "Respiratory System",
     email: "lisa.t@company.com",
     phone: "+1 (555) 567-8901",
@@ -63,8 +63,8 @@ const employees = [
   },
   {
     id: 6,
-    name: "James Wilson",
-    position: "Sleep Medicine Specialist",
+    name: "Dr. S M Mohiuddin",
+    position: "Endocrinologist",
     department: " Sleep Disorders",
     email: "james.w@company.com",
     phone: "+1 (555) 678-9012",
@@ -73,8 +73,8 @@ const employees = [
   },
   {
     id: 7,
-    name: "Anna Martinez",
-    position: "Oncologist ",
+    name: "	Dr. Tanjina Hossain",
+    position: "Endocrinologist ",
     department: "Cancer Treatment",
     email: "anna.m@company.com",
     phone: "+1 (555) 789-0123",
@@ -83,8 +83,8 @@ const employees = [
   },
   {
     id: 8,
-    name: "Robert Taylor",
-    position: "Neonatologist",
+    name: "	Dr. Ahmed Ifrad Bin Raunak",
+    position: "Endocrinologist",
     department: "Newborn Intensive Care (NICU)",
     email: "robert.t@company.com",
     phone: "+1 (555) 890-1234",
@@ -95,7 +95,7 @@ const employees = [
 
 export default function Doctors() {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const cardsPerView = 4
+  const cardsPerView = 5
   const maxIndex = Math.max(0, employees.length - cardsPerView)
 
   const nextSlide = () => setCurrentIndex((prev) => Math.min(prev + 1, maxIndex))
@@ -104,21 +104,22 @@ export default function Doctors() {
   const visibleEmployees = employees.slice(currentIndex, currentIndex + cardsPerView)
 
   return (
-    <div className="w-full max-w-7xl mx-auto p-6">
+    <div className="bg-[#fbfbfb]">
+      <div className="w-full container mx-auto py-12 ">
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-2">Our Doctors</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-2">Our specialists</h2>
         <p className="text-gray-600">Meet the amazing people who make it all happen</p>
       </div>
 
       <div className="relative">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6 mb-6">
           {visibleEmployees.map((emp) => (
             <div
               key={emp.id}
               className="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition-shadow duration-300"
             >
               <div className="relative">
-                <img src={emp.image} alt={emp.name} className="w-full h-48 object-cover" />
+                <img src={emp.image} alt={emp.name} className="w-full h-[250px]  object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
               <div className="p-4">
@@ -178,9 +179,10 @@ export default function Doctors() {
       <div className="text-center mt-2">
         <span className="text-sm text-gray-500">
           Showing {currentIndex + 1}-{Math.min(currentIndex + cardsPerView, employees.length)} of{" "}
-          {employees.length} employees
+          {employees.length} Doctors
         </span>
       </div>
+    </div>
     </div>
   )
 }

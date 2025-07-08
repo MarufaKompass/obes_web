@@ -1,24 +1,30 @@
-import React from 'react'
-import { Heart } from "lucide-react";
 import { Link } from "react-router-dom";
-import whiteLogo from "../../public/images/logo/whiteLogo.png"
+import whiteLogo from "../../public/images/logo/whiteLogo.png";
+import Bottom from "./Bottom";
 export default function Footer() {
   return (
-<footer className="w-full border-t bg-[#1E2939] text-white">
+    <footer className="w-full border-t bg-[#1E2939] text-white">
       <div className="container mx-auto px-4 py-12 md:px-6 md:py-16 lg:py-20">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand Info & Social Icons */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               {/* <Heart className="h-6 w-6 text-primary" /> */}
-              <img src={whiteLogo} alt="whiteLogo" className='w-30'/>
+              <img src={whiteLogo} alt="whiteLogo" className="w-30" />
             </div>
-            <p className="text-[#808080] text-[14px]"  style={{ fontFamily: "poppins" }}>
-              Providing exceptional healthcare services with compassion and expertise since 1995.
+            <p
+              className="text-[#808080] text-[14px]"
+              style={{ fontFamily: "poppins" }}
+            >
+              Providing exceptional healthcare services with compassion and
+              expertise since 2025.
             </p>
             <div className="flex space-x-4">
               {/* Facebook */}
-              <button className="text-white hover:text-white" aria-label="Facebook">
+              <button
+                className="text-white hover:text-white"
+                aria-label="Facebook"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -36,7 +42,10 @@ export default function Footer() {
               </button>
 
               {/* Twitter */}
-              <button className="text-white hover:text-blue-400" aria-label="Twitter">
+              <button
+                className="text-white hover:text-blue-400"
+                aria-label="Twitter"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -54,7 +63,10 @@ export default function Footer() {
               </button>
 
               {/* Instagram */}
-              <button className="text-white hover:text-pink-600" aria-label="Instagram">
+              <button
+                className="text-white hover:text-pink-600"
+                aria-label="Instagram"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -74,7 +86,10 @@ export default function Footer() {
               </button>
 
               {/* LinkedIn */}
-              <button className="text-white hover:text-blue-700" aria-label="LinkedIn">
+              <button
+                className="text-white hover:text-blue-700"
+                aria-label="LinkedIn"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -99,33 +114,66 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-bold">Quick Links</h3>
             <nav className="flex flex-col space-y-2">
-              <Link href="#" className="text-white hover:text-primary"  style={{ fontFamily: "poppins" }}>Home</Link>
-              <Link href="#about" className="text-white hover:text-primary"  style={{ fontFamily: "poppins" }}>About Us</Link>
-              <Link href="#services" className="text-white hover:text-primary"  style={{ fontFamily: "poppins" }}>Services</Link>
-              <Link href="#doctors" className="text-white hover:text-primary"  style={{ fontFamily: "poppins" }}>Our Doctors</Link>
-              <Link href="#blog" className="text-white hover:text-primary"  style={{ fontFamily: "poppins" }}>Blog</Link>
-              <Link href="#contact" className="text-white hover:text-primary"  style={{ fontFamily: "poppins" }}>Contact</Link>
+              <Link
+                href="#"
+                className="text-white hover:text-primary"
+                style={{ fontFamily: "poppins" }}
+              >
+                Home
+              </Link>
+              <Link
+                href="#about"
+                className="text-white hover:text-primary"
+                style={{ fontFamily: "poppins" }}
+              >
+                About Us
+              </Link>
+              <Link
+                href="#services"
+                className="text-white hover:text-primary"
+                style={{ fontFamily: "poppins" }}
+              >
+                Services
+              </Link>
+              <Link
+                href="#doctors"
+                className="text-white hover:text-primary"
+                style={{ fontFamily: "poppins" }}
+              >
+                Our Doctors
+              </Link>
+              <Link
+                href="#blog"
+                className="text-white hover:text-primary"
+                style={{ fontFamily: "poppins" }}
+              >
+                Blog
+              </Link>
+              <Link
+                href="#contact"
+                className="text-white hover:text-primary"
+                style={{ fontFamily: "poppins" }}
+              >
+                Contact
+              </Link>
+              <a
+                href="https://bes.org.bd/"
+                target="_blank"
+                className="text-white hover:text-primary"
+                style={{ fontFamily: "poppins" }}
+              >
+                <p>BES</p>
+              </a>
             </nav>
           </div>
 
           {/* Services */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-bold">Services</h3>
-            <nav className="flex flex-col space-y-2">
-              <Link href="#" className="text-white hover:text-primary"  style={{ fontFamily: "poppins" }}>General Medicine</Link>
-              <Link href="#" className="text-white hover:text-primary"  style={{ fontFamily: "poppins" }}>Cardiology</Link>
-              <Link href="#" className="text-white hover:text-primary"  style={{ fontFamily: "poppins" }}>Pediatrics</Link>
-              <Link href="#" className="text-white hover:text-primary"  style={{ fontFamily: "poppins" }}>Diagnostics</Link>
-              <Link href="#" className="text-white hover:text-primary"  style={{ fontFamily: "poppins" }}>Emergency Care</Link>
-              <Link href="#" className="text-white hover:text-primary"  style={{ fontFamily: "poppins" }}>Preventive Care</Link>
-            </nav>
-          </div>
 
-          {/* Newsletter */}
           <div className="space-y-4">
             <h3 className="text-lg font-bold">Newsletter</h3>
-            <p className="text-gray-400"  style={{ fontFamily: "poppins" }}>
-              Subscribe to our newsletter for the latest updates and health tips.
+            <p className="text-gray-400" style={{ fontFamily: "poppins" }}>
+              Subscribe to our newsletter for the latest updates and health
+              tips.
             </p>
             <form className="space-y-2">
               <div className="flex gap-2">
@@ -142,30 +190,45 @@ export default function Footer() {
                   Subscribe
                 </button>
               </div>
-              <p className="text-xs text-gray-400"  style={{ fontFamily: "poppins" }}>
+              <p
+                className="text-xs text-gray-400"
+                style={{ fontFamily: "poppins" }}
+              >
                 By subscribing, you agree to our{" "}
-                <Link href="#" className="underline hover:text-white"  style={{ fontFamily: "poppins" }}>
+                <Link
+                  href="#"
+                  className="underline hover:text-white"
+                  style={{ fontFamily: "poppins" }}
+                >
                   Privacy Policy
                 </Link>
               </p>
             </form>
           </div>
+
+          {/* Newsletter */}
+          <div className="space-y-4 flex items-center justify-end">
+            <nav className="flex  flex-col space-y-2">
+              <p>Website Developed by :</p>
+
+              <div className="flex gap-2">
+                <a
+                  href="https://hellokompass.com/"
+                  target="_blank"
+                  className="text-[#12a9b2]"
+                >
+                  Kompass Technology Limited{" "}
+                </a>
+              </div>
+            </nav>
+          </div>
         </div>
 
         {/* Bottom Footer */}
         <div className="mt-10 border-t pt-6">
-          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-            <p className="text-center text-sm text-gray-400" style={{ fontFamily: "poppins" }}>
-              &copy; {new Date().getFullYear()} OBES. All rights reserved.
-            </p>
-            <nav className="flex gap-4 text-sm">
-              <Link to="#" className="text-gray-400 hover:text-white" style={{ fontFamily: "poppins" }}>Privacy Policy</Link>
-              <Link to="#" className="text-gray-400 hover:text-white" style={{ fontFamily: "poppins" }}>Terms of Service</Link>
-              <Link to="#" className="text-gray-400 hover:text-white" style={{ fontFamily: "poppins" }}>Cookie Policy</Link>
-            </nav>
-          </div>
+          <Bottom></Bottom>
         </div>
       </div>
     </footer>
-  )
+  );
 }

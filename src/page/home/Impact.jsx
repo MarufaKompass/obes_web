@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Impact() {
     const data = [
-        { value: "5,000+", label: "Clients Served" },
+        { value: "5,000+", label: "Registered user" },
         { value: "92%", label: "Success Rate" },
         { value: "15+", label: "Certified Specialists" },
         { value: "10", label: "Years of Experience" },

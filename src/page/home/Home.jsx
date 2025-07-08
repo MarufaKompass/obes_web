@@ -11,9 +11,9 @@ export default function Home() {
   return (
     <div>
       <HeroSection></HeroSection>
-      <ImageGallery></ImageGallery>
       <HealthChecklist></HealthChecklist>
       <Doctors></Doctors>
+      <ImageGallery></ImageGallery>
       <Health></Health>
       <HealthCare></HealthCare>
       <Impact></Impact>

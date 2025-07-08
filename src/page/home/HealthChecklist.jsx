@@ -16,13 +16,13 @@ import {
 } from "lucide-react"
 
 const healthSteps = [
-  { id: 1, title: "Limit Sugary Drinks", description: "Reduce intake of sodas and sweetened beverages", icon: Coffee, color: "from-orange-400 to-red-500", bgColor: "bg-orange-50", textColor: "text-orange-700" },
-  { id: 2, title: "1+ Hour Physical Exercise", description: "Daily movement keeps your body strong", icon: Dumbbell, color: "from-blue-400 to-cyan-500", bgColor: "bg-blue-50", textColor: "text-blue-700" },
-  { id: 3, title: "Limit Screen Time", description: "Take breaks from digital devices", icon: Smartphone, color: "from-purple-400 to-pink-500", bgColor: "bg-purple-50", textColor: "text-purple-700" },
-  { id: 4, title: "Balanced Main Meals", description: "Nutritious meals fuel your day", icon: UtensilsCrossed, color: "from-green-400 to-emerald-500", bgColor: "bg-green-50", textColor: "text-green-700" },
-  { id: 5, title: "Health Pillars", description: "Focus on mental and physical wellness", icon: Heart, color: "from-rose-400 to-pink-500", bgColor: "bg-rose-50", textColor: "text-rose-700" },
-  { id: 6, title: "5+ Portions Fruits & Vegetables", description: "Colorful nutrition for optimal health", icon: Apple, color: "from-lime-400 to-green-500", bgColor: "bg-lime-50", textColor: "text-lime-700" },
-  { id: 7, title: "7-9 Hours of Sleep", description: "Quality rest for recovery and growth", icon: Moon, color: "from-indigo-400 to-purple-500", bgColor: "bg-indigo-50", textColor: "text-indigo-700" },
+  { id: 0, title: "0 Sugary Drinks", description: "Reduce intake of sodas and sweetened beverages", icon: Coffee, color: "from-orange-400 to-red-500", bgColor: "bg-orange-50", textColor: "text-orange-700" },
+  { id: 1, title: "1+ Hour Physical Exercise", description: "Daily movement keeps your body strong", icon: Dumbbell, color: "from-blue-400 to-cyan-500", bgColor: "bg-blue-50", textColor: "text-blue-700" },
+  { id: 2, title: "2 or Less Screen Time", description: "Take breaks from digital devices", icon: Smartphone, color: "from-purple-400 to-pink-500", bgColor: "bg-purple-50", textColor: "text-purple-700" },
+  { id: 3, title: "3 Main Meals", description: "Do not skip meals", icon: UtensilsCrossed, color: "from-green-400 to-emerald-500", bgColor: "bg-green-50", textColor: "text-green-700" },
+  { id: 4, title: "4 Pillars of Treatment", description: "Focus on mental and physical wellness", icon: Heart, color: "from-rose-400 to-pink-500", bgColor: "bg-rose-50", textColor: "text-rose-700" },
+  { id: 5, title: "5 Portions Fruits & Vegetables", description: "Colorful nutrition for optimal health", icon: Apple, color: "from-lime-400 to-green-500", bgColor: "bg-lime-50", textColor: "text-lime-700" },
+  { id: 6, title: "6-8 Hours of Sleep", description: "Quality rest for recovery and growth", icon: Moon,color: "from-gray-700 to-gray-900", bgColor: "bg-indigo-50", textColor: "text-indigo-700" },
 ]
 
 export default function HealthChecklist() {
@@ -36,7 +36,7 @@ export default function HealthChecklist() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 py-24">
+    <div className="min-h-screen py-24">
       {/* Decorative background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-200/30 to-purple-200/30 rounded-full blur-3xl"></div>
@@ -62,7 +62,7 @@ export default function HealthChecklist() {
             <span>Progress: {completedSteps.length}/7</span>
             <div className="w-32 h-2 bg-slate-200 rounded-full overflow-hidden">
               <div
-                className="h-full bg-gradient-to-r from-green-400 to-emerald-500 transition-all duration-500"
+                className="h-full bg-gradient-to-r from-[#7B1E19] to-[#512725] transition-all duration-500"
                 style={{ width: `${(completedSteps.length / 7) * 100}%` }}
               ></div>
             </div>
@@ -82,7 +82,7 @@ export default function HealthChecklist() {
               <div
                 key={step.id}
                 className={`cursor-pointer overflow-hidden rounded-xl shadow-md transition-all duration-300 border border-[#DEDEDE] ${
-                  isCompleted ? "ring-2 ring-green-400" : "hover:shadow-xl"
+                  isCompleted ? "ring-2 ring-[#7B1E19]" : "hover:shadow-xl"
                 }`}
                 onMouseEnter={() => setHoveredStep(step.id)}
                 onMouseLeave={() => setHoveredStep(null)}
@@ -90,12 +90,12 @@ export default function HealthChecklist() {
               >
                 {/* Icon Area */}
                 <div className={`relative h-32 flex items-center justify-center bg-gradient-to-br ${step.color}`}>
-                  <div className="absolute top-3 left-3 w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-white text-xl font-bold">
+                  <div className="absolute top-3 left-3 w-14 h-14 bg-white/20 rounded-full flex items-center justify-center text-white text-2xl font-bold">
                     {step.id}
                   </div>
 
                   {isCompleted && (
-                    <div className="absolute top-3 right-3 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center animate-bounce">
+                    <div className="absolute top-3 right-3 w-8 h-8 bg-[#7B1E19] rounded-full flex items-center justify-center animate-bounce">
                       <CheckCircle className="w-5 h-5 text-white" />
                     </div>
                   )}

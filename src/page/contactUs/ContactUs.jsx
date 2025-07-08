@@ -61,11 +61,11 @@ export default function ContactUs() {
           </div>
           <div>
             <h4 className="font-semibold">📞 Phone</h4>
-            <p>+1 (555) 123-4567</p>
+            <p>+88 01511 552012</p>
           </div>
           <div>
             <h4 className="font-semibold">✉️ Email</h4>
-            <p>support@yourcompany.com</p>
+            <p>info@bes-org.net</p>
           </div>
         </div>
       </div>
