@@ -19,7 +19,7 @@ export default function Header() {
       <div className="flex justify-between px-10 container">
         <Link to="/">
           <div>
-            <img src={logo} alt="logo" className="w-15" />
+            <img src={logo} alt="logo" className="w-25" />
           </div>
         </Link>
         <div className="flex gap-2 items-center">
@@ -27,14 +27,14 @@ export default function Header() {
             <div key={index} className="relative">
               <div
                 onClick={() => handleToggle(index)}
-                className="cursor-pointer text-[#333] hover:text-[#7B1E19] capitalize pl-4 text-[15px] font-medium flex justify-between items-center"
+                className="cursor-pointer text-[#333] hover:text-[#7B1E19] capitalize pl-4 text-[18px] font-semibold flex justify-between items-center"
                 style={{ fontFamily: "poppins" }}>
-                <Link to={page.path}>{page.name}</Link>
-                {page.children && (
+                <Link to={page.path} className="font-poppins">{page.name}</Link>
+                {/* {page.children && (
                   <span className="pl-2">
                     {openIndex === index ? <ChevronUp /> : <ChevronDown />}
                   </span>
-                )}
+                )} */}
               </div>
 
               {/* Animated Submenu */}

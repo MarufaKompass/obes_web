@@ -13,7 +13,7 @@ export default function Home() {
       <HeroSection></HeroSection>
       <HealthChecklist></HealthChecklist>
       <Doctors></Doctors>
-      <ImageGallery></ImageGallery>
+      {/* <ImageGallery></ImageGallery> */}
       <Health></Health>
       <HealthCare></HealthCare>
       <Impact></Impact>

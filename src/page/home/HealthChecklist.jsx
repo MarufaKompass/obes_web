@@ -88,19 +88,19 @@ export default function HealthChecklist() {
                 onMouseLeave={() => setHoveredStep(null)}
                 onClick={() => toggleStep(step.id)}
               >
+                {/* absolute top-3 left-3 */}
                 {/* Icon Area */}
-                <div className={`relative h-32 flex items-center justify-center bg-gradient-to-br ${step.color}`}>
-                  <div className="absolute top-3 left-3 w-14 h-14 bg-white/20 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+                <div className={`relative h-32 flex items-center justify-center bg-gradient-to-br  ${step.color}`}>
+                  <div className=" w-18 h-18 bg-white/20 rounded-full flex items-center justify-center text-white text-3xl font-bold">
                     {step.id}
                   </div>
 
                   {isCompleted && (
-                    <div className="absolute top-3 right-3 w-8 h-8 bg-[#7B1E19] rounded-full flex items-center justify-center animate-bounce">
+                    <div className=" w-8 h-8 bg-[#7B1E19] rounded-full flex items-center justify-center animate-bounce">
                       <CheckCircle className="w-5 h-5 text-white" />
                     </div>
                   )}
-
-                  <Icon className={`w-10 h-10 text-white transition-all ${isHovered ? "scale-110 rotate-6" : ""}`} />
+                  <Icon className={`absolute top-3 left-3  w-10 h-10 text-white transition-all ${isHovered ? "scale-110 rotate-6" : ""}`} />
                 </div>
 
                 {/* Text Content */}

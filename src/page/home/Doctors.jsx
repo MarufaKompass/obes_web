@@ -2,95 +2,65 @@
 
 import { useState } from "react"
 import { ChevronLeft, ChevronRight, Mail, Phone, MapPin } from "lucide-react"
-import doctors1 from "../../../public/images/home/doctors1.jpg";
-import doctors2 from "../../../public/images/home/doctors2.jpg";
-import doctors3 from "../../../public/images/home/doctors3.jpg";
-import doctors4 from "../../../public/images/home/doctors4.jpg";
-import doctors5 from "../../../public/images/home/doctors5.jpg";
-import doctors6 from "../../../public/images/home/doctors6.jpg";
-import doctors7 from "../../../public/images/home/doctors7.jpg";
-import doctors8 from "../../../public/images/home/doctors8.jpg";
+import doctors1 from "../../../public/images/home/doctors/doctors1.jpeg";
+import doctors2 from "../../../public/images/home/doctors/doctors2.jpeg";
+import doctors3 from "../../../public/images/home/doctors/doctors3.jpeg";
+import doctors4 from "../../../public/images/home/doctors/doctors4.jpeg";
+import doctors5 from "../../../public/images/home/doctors/doctors5.jpeg";
+
 const employees = [
   {
     id: 1,
-    name: "Dr. Tahniyah Haq",
-    position: "Endocrinologist",
-    department: "Heart & Vascular",
+    name: "Prof. Muhammad Hafizur Rahman",
+    position: "Senior Consultant, United Hospital, Dhaka",
+    department: "President, BES",
     email: "sarah.j@company.com",
     phone: "+1 (555) 123-4567",
     location: "San Francisco, CA",
-    image: doctors3,
+    image: doctors1,
   },
   {
     id: 2,
-    name: "Dr. Mohammad Shah Alam",
-    position: "Endocrinologist",
-    department: "Heart Rhythm Disorders",
+    name: "Prof Md Faruque Pathan",
+    position: "Director, Academy, BIRDEM",
+    department: "Chief Patron, BES",
     email: "michael.c@company.com",
     phone: "+1 (555) 234-5678",
     location: "New York, NY",
-    image:doctors1,
+    image:doctors2,
   },
+
   {
     id: 3,
-    name: "Dr. Nazma Akter",
-    position: "Endocrinologist",
-    department: "Brain & Nervous System",
-    email: "emily.r@company.com",
-    phone: "+1 (555) 345-6789",
-    location: "Austin, TX",
-    image: doctors6,
-  },
-  {
-    id: 4,
-    name: "Dr. Shahjada Selim",
-    position: "Endocrinologist ",
-    department: "Brain & Spine Surgery",
+    name: "Dr Shahjada Selim",
+    position: "Associate Professor, Department of Endocrinology, BMU ",
+    department: "General Secretary, BES",
     email: "david.k@company.com",
     phone: "+1 (555) 456-7890",
     location: "Seattle, WA",
-    image: doctors2,
+    image: doctors3,
+  },
+  {
+    id: 4,
+    name: "Dr. Tahniyah Haq",
+    position: "Associate Professor, Department of Endocrinology, BMU Coordinator",
+    department: "Obesity Taskforce and International Affairs Secretary, BES",
+    email: "lisa.t@company.com",
+    phone: "+1 (555) 567-8901",
+    location: "Los Angeles, CA",
+    image: doctors4,
   },
   {
     id: 5,
-    name: "Dr. Marufa Mustari",
-    position: "Endocrinologist",
-    department: "Respiratory System",
+    name: "Dr Faria Afsana",
+    position: "Associate Professor",
+    department: "Dept Endocrinology, BIRDEM, Dhaka And President Elect, BES",
     email: "lisa.t@company.com",
     phone: "+1 (555) 567-8901",
     location: "Los Angeles, CA",
     image: doctors5,
   },
-  {
-    id: 6,
-    name: "Dr. S M Mohiuddin",
-    position: "Endocrinologist",
-    department: " Sleep Disorders",
-    email: "james.w@company.com",
-    phone: "+1 (555) 678-9012",
-    location: "Chicago, IL",
-    image: doctors4,
-  },
-  {
-    id: 7,
-    name: "	Dr. Tanjina Hossain",
-    position: "Endocrinologist ",
-    department: "Cancer Treatment",
-    email: "anna.m@company.com",
-    phone: "+1 (555) 789-0123",
-    location: "Miami, FL",
-    image: doctors7,
-  },
-  {
-    id: 8,
-    name: "	Dr. Ahmed Ifrad Bin Raunak",
-    position: "Endocrinologist",
-    department: "Newborn Intensive Care (NICU)",
-    email: "robert.t@company.com",
-    phone: "+1 (555) 890-1234",
-    location: "Boston, MA",
-    image: doctors8,
-  },
+
 ]
 
 export default function Doctors() {
@@ -107,7 +77,7 @@ export default function Doctors() {
     <div className="bg-[#fbfbfb]">
       <div className="w-full container mx-auto py-12 ">
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-2">Our specialists</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-2">Our Experts</h2>
         <p className="text-gray-600">Meet the amazing people who make it all happen</p>
       </div>
 
@@ -119,14 +89,14 @@ export default function Doctors() {
               className="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition-shadow duration-300"
             >
               <div className="relative">
-                <img src={emp.image} alt={emp.name} className="w-full h-[250px]  object-cover" />
+                <img src={emp.image} alt={emp.name} className="w-full h-[270px] " />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-gray-900 mb-1">{emp.name}</h3>
                 <p className="text-blue-600 text-sm font-medium mb-1">{emp.position}</p>
                 <p className="text-gray-500 text-xs mb-3">{emp.department}</p>
-                <div className="space-y-2">
+                {/* <div className="space-y-2">
                   <div className="flex items-center text-gray-600 text-xs">
                     <Mail className="w-3 h-3 mr-2 text-gray-400" />
                     <span className="truncate">{emp.email}</span>
@@ -135,11 +105,7 @@ export default function Doctors() {
                     <Phone className="w-3 h-3 mr-2 text-gray-400" />
                     <span>{emp.phone}</span>
                   </div>
-                  {/* <div className="flex items-center text-gray-600 text-xs">
-                    <MapPin className="w-3 h-3 mr-2 text-gray-400" />
-                    <span>{emp.location}</span>
-                  </div> */}
-                </div>
+                </div> */}
               </div>
             </div>
           ))}

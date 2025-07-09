@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import whiteLogo from "../../public/images/logo/whiteLogo.png";
 import Bottom from "./Bottom";
+import app from "../../public/images/home/app.png";
+import google from "../../public/images/home/google.png";
 export default function Footer() {
   return (
     <footer className="w-full border-t bg-[#1E2939] text-white">
@@ -13,7 +15,7 @@ export default function Footer() {
               <img src={whiteLogo} alt="whiteLogo" className="w-30" />
             </div>
             <p
-              className="text-[#808080] text-[14px]"
+              className="text-[#fff] text-[14px]"
               style={{ fontFamily: "poppins" }}
             >
               Providing exceptional healthcare services with compassion and
@@ -209,7 +211,7 @@ export default function Footer() {
           {/* Newsletter */}
           <div className="space-y-4 flex items-center justify-end">
             <nav className="flex  flex-col space-y-2">
-              <p>Website Developed by :</p>
+              <p>Consultant & Developed by</p>
 
               <div className="flex gap-2">
                 <a
@@ -217,7 +219,19 @@ export default function Footer() {
                   target="_blank"
                   className="text-[#12a9b2]"
                 >
-                  Kompass Technology Limited{" "}
+                  Kompass Technology Limited
+                </a>
+              </div>
+              <div className="flex gap-2">
+              <a href="https://play.google.com/store/apps/details?id=com.hellokompass.connect&pli=1" target="_blank">
+                  <div>
+                <img src={app} alt="app store"  style={{width:'140px'}}></img>
+                </div>
+              </a>
+                <a href="https://apps.apple.com/us/app/kompass-connect/id6449901732?platform=iphone" target="_blank"> 
+                <div>
+                <img src={google} alt="google store" style={{width:'140px'}}></img>
+                </div>
                 </a>
               </div>
             </nav>
