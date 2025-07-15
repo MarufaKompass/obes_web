@@ -89,7 +89,7 @@ export default function Doctors() {
               className="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition-shadow duration-300"
             >
               <div className="relative">
-                <img src={emp.image} alt={emp.name} className="w-full h-[270px] " />
+                <img src={emp.image} alt={emp.name} className="w-full h-[300px] object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
               <div className="p-4">
