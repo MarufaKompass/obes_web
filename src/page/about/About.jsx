@@ -17,7 +17,7 @@ export default function About() {
         
          <div className="flex items-center justify-center h-100">
            <div>
-            <h2 className="text-3xl font-bold mb-4 text-[#7b1e19]">Who We Are</h2>
+            <h2 className="lg:text-3xl text-2xl font-bold mb-4 text-[#7b1e19]">Who We Are</h2>
             <p className="text-base leading-relaxed mb-1">
               We are a passionate team of creatives, engineers, and strategists committed to helping brands transform through technology.
             </p>
