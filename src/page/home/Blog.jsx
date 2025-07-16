@@ -26,7 +26,7 @@ export default function Blog() {
     <div>
  
  <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
-  <div className="container mx-auto px-4 md:px-6">
+  <div className="md:container mx-auto lg:px-0 px-4 ">
     <div className="flex flex-col items-center justify-center space-y-4 text-center">
       <div className="space-y-2">
         <span className="inline-block rounded-[100%] border border-[#7b1e19] bg-[#7b1e19] px-6 py-2 text-sm font-medium text-[#fff]">

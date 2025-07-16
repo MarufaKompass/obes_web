@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { ChevronLeft, ChevronRight, Mail, Phone, MapPin } from "lucide-react"
 import doctors1 from "../../../public/images/home/doctors/doctors1.jpeg";
 import doctors2 from "../../../public/images/home/doctors/doctors2.jpeg";
@@ -27,7 +27,7 @@ const employees = [
     email: "michael.c@company.com",
     phone: "+1 (555) 234-5678",
     location: "New York, NY",
-    image:doctors2,
+    image: doctors2,
   },
 
   {
@@ -60,12 +60,31 @@ const employees = [
     location: "Los Angeles, CA",
     image: doctors5,
   },
+  
+
 
 ]
 
 export default function Doctors() {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const cardsPerView = 5
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [cardsPerView, setCardsPerView] = useState(5)
+
+
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth
+      if (width >= 1024) setCardsPerView(5)     
+      else if (width >= 768) setCardsPerView(3) 
+      else if (width >= 500) setCardsPerView(2) 
+      else setCardsPerView(1)                   
+    }
+
+    handleResize() // set initially
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
+
   const maxIndex = Math.max(0, employees.length - cardsPerView)
 
   const nextSlide = () => setCurrentIndex((prev) => Math.min(prev + 1, maxIndex))
@@ -75,28 +94,50 @@ export default function Doctors() {
 
   return (
     <div className="bg-[#fbfbfb]">
-      <div className="w-full container mx-auto py-12 ">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-2">Our Experts</h2>
-        <p className="text-gray-600">Meet the amazing people who make it all happen</p>
-      </div>
+      <div className="w-full md:container mx-auto py-12 ">
+        <div className="text-center lg:mb-8 mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-2">Our Experts</h2>
+          <p className="text-gray-600">Meet the amazing people who make it all happen</p>
+        </div>
 
-      <div className="relative">
-        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6 mb-6">
-          {visibleEmployees.map((emp) => (
-            <div
-              key={emp.id}
-              className="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition-shadow duration-300"
-            >
-              <div className="relative">
-                <img src={emp.image} alt={emp.name} className="w-full h-[300px] object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-              </div>
-              <div className="p-4">
-                <h3 className="text-lg font-semibold text-gray-900 mb-1">{emp.name}</h3>
-                <p className="text-blue-600 text-sm font-medium mb-1">{emp.position}</p>
-                <p className="text-gray-500 text-xs mb-3">{emp.department}</p>
-                {/* <div className="space-y-2">
+
+        <div className="relative">
+          <div className="lg:mb-4 mb-6">
+
+            {currentIndex > 0 && (
+              <button
+                onClick={prevSlide}
+                className="absolute right-12 top-[-30px] -translate-y-1/2 -translate-x-4 bg-primary-color text-white p-2 rounded-full shadow-md hover:shadow-lg z-10"
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+            )}
+
+            {currentIndex < maxIndex && (
+              <button
+                onClick={nextSlide}
+                className="absolute right-8 top-[-30px] -translate-y-1/2 translate-x-4 bg-primary-color text-white p-2 rounded-full shadow-md hover:shadow-lg z-10"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
+            )}
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-6 lg:px-0 px-6">
+            {visibleEmployees.map((emp) => (
+              <div
+                key={emp.id}
+                className="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition-shadow duration-300"
+              >
+                <div className="relative">
+                  <img src={emp.image} alt={emp.name} className="w-full md:h-[300px] h-[400px] object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                </div>
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">{emp.name}</h3>
+                  <p className="text-blue-600 text-sm font-medium mb-1">{emp.position}</p>
+                  <p className="text-gray-500 text-xs mb-3">{emp.department}</p>
+                  {/* <div className="space-y-2">
                   <div className="flex items-center text-gray-600 text-xs">
                     <Mail className="w-3 h-3 mr-2 text-gray-400" />
                     <span className="truncate">{emp.email}</span>
@@ -106,49 +147,32 @@ export default function Doctors() {
                     <span>{emp.phone}</span>
                   </div>
                 </div> */}
+                </div>
               </div>
-            </div>
+            ))}
+          </div>
+
+
+        </div>
+
+        <div className="flex justify-center space-x-2 mt-4">
+          {Array.from({ length: maxIndex + 1 }).map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-2 h-2 rounded-full ${index === currentIndex ? "bg-blue-600" : "bg-gray-300 hover:bg-gray-400"
+                }`}
+            />
           ))}
         </div>
 
-        {currentIndex > 0 && (
-          <button
-            onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white p-2 rounded-full shadow-md hover:shadow-lg z-10"
-          >
-            <ChevronLeft className="w-4 h-4" />
-          </button>
-        )}
-
-        {currentIndex < maxIndex && (
-          <button
-            onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white p-2 rounded-full shadow-md hover:shadow-lg z-10"
-          >
-            <ChevronRight className="w-4 h-4" />
-          </button>
-        )}
+        <div className="text-center mt-2">
+          <span className="text-sm text-gray-500">
+            Showing {currentIndex + 1}-{Math.min(currentIndex + cardsPerView, employees.length)} of{" "}
+            {employees.length} Doctors
+          </span>
+        </div>
       </div>
-
-      <div className="flex justify-center space-x-2 mt-4">
-        {Array.from({ length: maxIndex + 1 }).map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`w-2 h-2 rounded-full ${
-              index === currentIndex ? "bg-blue-600" : "bg-gray-300 hover:bg-gray-400"
-            }`}
-          />
-        ))}
-      </div>
-
-      <div className="text-center mt-2">
-        <span className="text-sm text-gray-500">
-          Showing {currentIndex + 1}-{Math.min(currentIndex + cardsPerView, employees.length)} of{" "}
-          {employees.length} Doctors
-        </span>
-      </div>
-    </div>
     </div>
   )
 }

@@ -10,13 +10,13 @@ import Doctors from "./Doctors";
 export default function Home() {
   return (
     <div>
-      {/* <HeroSection></HeroSection>
+      <HeroSection></HeroSection>
       <HealthChecklist></HealthChecklist>
       <Doctors></Doctors>
       <Health></Health>
-      <HealthCare></HealthCare>
-      <Impact></Impact>
-      <Blog></Blog> */}
+       <HealthCare></HealthCare>
+        <Impact></Impact>
+        <Blog></Blog>
     </div>
   );
 }
