@@ -3,11 +3,12 @@ import { Link } from "react-router";
 import routes from "../routes";
 import logo from "../../public/images/logo/Logo.png";
 import { ChevronUp, ChevronDown } from "lucide-react";
+import MobileResponsive from "./MobileResponsive";
 export default function Header() {
 
   const pages = routes[0].pages;
   const [openIndex, setOpenIndex] = useState(null);
-
+  const [sidebarOpen, setSidebarOpen] = useState(false)
   const handleToggle = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
@@ -16,13 +17,22 @@ export default function Header() {
 
   return (
     <nav className="p-2 shadow-lg">
-      <div className="flex justify-between px-10 container">
-        <Link to="/">
+      
+   {/* Hamburger Button (md and smaller) */}
+
+      <div className="flex justify-between lg:px-10 px-4 md:container mx-auto">
+     <div  className="flex items-center justify-between gap-4">
+         <div className="flex items-center justify-between ">
+      <MobileResponsive  sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} pages={pages}></MobileResponsive>
+     </div>
+      <Link to="/">
           <div>
             <img src={logo} alt="logo" className="w-25" />
           </div>
         </Link>
-        <div className="flex gap-2 items-center">
+     </div>
+       
+        <div className="hidden md:flex gap-2 items-center">
           {pages.map((page, index) => (
             <div key={index} className="relative">
               <div
@@ -61,6 +71,10 @@ export default function Header() {
             </div>
           ))}
         </div>
+
+
+
+
         <div className=" flex justify-between items-center ml-4 rounded-2xl relative group cursor">
           {/* <div>
           <img src={man} alt="man"  className="w-14 h-14" />
@@ -76,6 +90,8 @@ export default function Header() {
           </a>
 
         </div>
+
+       
       </div>
     </nav>
   );
