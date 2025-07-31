@@ -10,7 +10,6 @@ export default function Impact() {
 
 
   const [data, setData] = useState(null);
-  console.log("data", data?.data)
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -18,7 +17,7 @@ export default function Impact() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://api.obesitybes.com/public/api/webcount'); // Replace with your API
+        const response = await fetch('https://api.obesitybes.com/public/api/webcount'); 
         if (!response.ok) {
           throw new Error('Failed to fetch');
         }
