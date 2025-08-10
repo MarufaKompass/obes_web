@@ -17,7 +17,7 @@ export default function Impact() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://api.obesitybes.com/public/api/webcount'); 
+        const response = await fetch('https://api.obesitybes.com/public/api/webcount');
         if (!response.ok) {
           throw new Error('Failed to fetch');
         }
