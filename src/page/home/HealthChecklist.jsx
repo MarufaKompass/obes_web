@@ -1,14 +1,3 @@
-// import image1 from "../../../public/images/heath/drinks.jpg";
-// import image2 from "../../../public/images/heath/exercise.jpg";
-// import image3 from "../../../public/images/heath/time.jpg";
-// import image4 from "../../../public/images/heath/meals.jpg";
-// import image5 from "../../../public/images/heath/treatment.png";
-// import image6 from "../../../public/images/heath/vegetables.jpg";
-// import image7 from "../../../public/images/heath/sleep.jpg";
-
-
-"use client"
-
 import { useState } from "react"
 import {
   Coffee, Dumbbell, Smartphone, UtensilsCrossed,
