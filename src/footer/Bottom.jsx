@@ -4,7 +4,7 @@ export default function Bottom() {
   return (
     <div>
       
-               <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
+               <div className="flex flex-col items-center justify-between gap-4 ">
             <p className="text-center text-sm text-gray-400" style={{ fontFamily: "poppins" }}>
               &copy; {new Date().getFullYear()} BES. All rights reserved.
             </p>

@@ -6,8 +6,8 @@ import google from "../../public/images/home/google.png";
 export default function Footer() {
   return (
     <footer className="w-full border-t bg-[#1E2939] text-white">
-      <div className="container mx-auto px-4 py-12 md:px-6 md:py-16 lg:py-20">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+      <div className="md:container mx-auto px-4 py-12 md:px-6 md:py-16 lg:py-20">
+        <div className="grid gap-8 grid-cols-1  md:grid-cols-2 lg:grid-cols-4">
           {/* Brand Info & Social Icons */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
@@ -182,7 +182,7 @@ export default function Footer() {
                 <input
                   type="email"
                   placeholder="Your email address"
-                  className="px-4 py-2 w-full bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="px-4 py-2  bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 />
                 <button
                   type="submit"
@@ -209,8 +209,8 @@ export default function Footer() {
           </div>
 
           {/* Newsletter */}
-          <div className="space-y-4 flex items-center justify-end">
-            <nav className="flex  flex-col space-y-2">
+          <div className="lg:flex block lg:items-center lg:justify-end">
+            <nav className="flex  flex-col space-y-1">
               <p>Consultant & Developed by</p>
 
               <div className="flex gap-2">
@@ -222,7 +222,7 @@ export default function Footer() {
                   Kompass Technology Limited
                 </a>
               </div>
-              <div className="flex gap-2">
+              <div className="flex gap-2 mt-4">
               <a href="https://play.google.com/store/apps/details?id=com.hellokompass.connect&pli=1" target="_blank">
                   <div>
                 <img src={app} alt="app store"  style={{width:'140px'}}></img>
