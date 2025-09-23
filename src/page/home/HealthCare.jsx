@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+
 import { HeartPulseIcon, CheckCircle2Icon, UserIcon } from "lucide-react";
-import axios from "axios";
+
 
 const services = [
   {
@@ -26,28 +26,6 @@ const services = [
 
 
 export default function HealthCare() {
-
-  const [health, setHealth] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchExperts = async () => {
-      try {
-        const res = await axios.get("https://api.obesitybes.com/public/api/newsletterview");
-        setHealth(res.data);   // save response data
-      } catch (err) {
-        setError(err.message);  // handle error
-      } finally {
-        setLoading(false);      // stop loading
-      }
-    };
-
-    fetchExperts();
-  }, []); // run once on component mount
-
-  if (loading) return <p>Loading experts...</p>;
-  if (error) return <p>Error: {error}</p>;
 
 
 
