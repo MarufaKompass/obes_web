@@ -14,10 +14,9 @@ import axios from "axios";
 export default function Doctors() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardsPerView, setCardsPerView] = useState(5)
-  const [experts, setExperts] = useState("");
-  console.log("experts", experts)
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [experts, setExperts] = useState("");
+  const [loading, setLoading] = useState(true);
 
 
   useEffect(() => {
