@@ -1,26 +1,53 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { HeartPulseIcon, CheckCircle2Icon, UserIcon } from "lucide-react";
+import axios from "axios";
+
+const services = [
+  {
+    title: "Nutrition Counseling",
+    description:
+      "Personalized dietary plans tailored to your specific health needs and goals.",
+    icon: <HeartPulseIcon className="h-10 w-10 text-[#7b1e19]" />,
+  },
+  {
+    title: "Weight Management",
+    description:
+      "Evidence-based programs to help you achieve and maintain a healthy weight.",
+    icon: <CheckCircle2Icon className="h-10 w-10 text-[#7b1e19]" />,
+  },
+  {
+    title: "Lifestyle Coaching",
+    description:
+      "Guidance on incorporating healthy habits into your daily routine.",
+    icon: <UserIcon className="h-10 w-10 text-[#7b1e19]" />,
+  },
+];
+
+
+
 export default function HealthCare() {
-  const services = [
-    {
-      title: "Nutrition Counseling",
-      description:
-        "Personalized dietary plans tailored to your specific health needs and goals.",
-      icon: <HeartPulseIcon className="h-10 w-10 text-[#7b1e19]" />,
-    },
-    {
-      title: "Weight Management",
-      description:
-        "Evidence-based programs to help you achieve and maintain a healthy weight.",
-      icon: <CheckCircle2Icon className="h-10 w-10 text-[#7b1e19]" />,
-    },
-    {
-      title: "Lifestyle Coaching",
-      description:
-        "Guidance on incorporating healthy habits into your daily routine.",
-      icon: <UserIcon className="h-10 w-10 text-[#7b1e19]" />,
-    },
-  ];
+
+  const [health, setHealth] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchExperts = async () => {
+      try {
+        const res = await axios.get("https://api.obesitybes.com/public/api/newsletterview");
+        setHealth(res.data);   // save response data
+      } catch (err) {
+        setError(err.message);  // handle error
+      } finally {
+        setLoading(false);      // stop loading
+      }
+    };
+
+    fetchExperts();
+  }, []); // run once on component mount
+
+  if (loading) return <p>Loading experts...</p>;
+  if (error) return <p>Error: {error}</p>;
 
   return (
     <section id="services" className="w-full py-12 bg-[#fafafa]">
@@ -50,7 +77,7 @@ export default function HealthCare() {
         </div>
 
         <div className=" mx-auto grid max-w-5xl items-center gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, index) => (
+          {services?.map((service, index) => (
             <div
               key={index}
               className="rounded-lg border border-green-100 bg-white shadow-sm p-4 flex flex-col justify-between"

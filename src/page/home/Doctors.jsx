@@ -7,13 +7,15 @@ import doctors2 from "../../../public/images/home/doctors/doctors2.jpeg";
 import doctors3 from "../../../public/images/home/doctors/doctors3.jpeg";
 import doctors4 from "../../../public/images/home/doctors/doctors4.jpeg";
 import doctors5 from "../../../public/images/home/doctors/doctors5.jpeg";
+import axios from "axios";
 
 
 
 export default function Doctors() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardsPerView, setCardsPerView] = useState(5)
-  const [experts, setExperts] = useState(null);
+  const [experts, setExperts] = useState("");
+  console.log("experts", experts)
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -39,25 +41,22 @@ export default function Doctors() {
 
 
   useEffect(() => {
-    fetch('https://api.obesitybes.com/public/api/expertlist')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(data => {
-        setExperts(data);
-        setLoading(false);
-      })
-      .catch(error => {
-        setError(error);
-        setLoading(false);
-      });
-  }, []);
+    const fetchExperts = async () => {
+      try {
+        const res = await axios.get("https://api.obesitybes.com/public/api/expertlist");
+        setExperts(res.data);   // save response data
+      } catch (err) {
+        setError(err.message);  // handle error
+      } finally {
+        setLoading(false);      // stop loading
+      }
+    };
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
+    fetchExperts();
+  }, []); // run once on component mount
+
+  if (loading) return <p>Loading experts...</p>;
+  if (error) return <p>Error: {error}</p>;
 
 
 
