@@ -1,17 +1,17 @@
 // import { Link } from 'react-router'
-import {Heart,ArrowRight} from "lucide-react"
+import { Heart, ArrowRight } from "lucide-react"
 
 import Slider from "./Slider";
 export default function HeroSection() {
   return (
     <section className="w-full py-12 bg-[#fbfbfb]">
-    <div className="md:container mx-auto px-4 md:px-6">
-      <div className="grid gap-6 lg:grid-cols-2 grid-cols-1">
+      <div className="md:container mx-auto px-4 md:px-6">
+        <div className="grid gap-6 lg:grid-cols-2 grid-cols-1">
 
-        <div className="flex flex-col justify-center space-y-4">
-          <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-primary-color" style={{ backgroundColor: 'rgba(123, 30, 25, 0.3)' }}>
+          <div className="flex flex-col justify-center space-y-4">
+            <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-primary-color" style={{ backgroundColor: 'rgba(123, 30, 25, 0.3)' }}>
               <Heart className="h-4 w-4" />
-              Your Health Journey Starts Here
+              Your Healthy Journey Starts Here
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
               Transform Your Life with
@@ -27,18 +27,18 @@ export default function HeroSection() {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </button>
             </div>
-        </div>
+          </div>
 
-      <div className="flex justify-center">
-          {/* <img
+          <div className="flex justify-center">
+            {/* <img
           src={heroSection}
           alt="Healthcare professionals"
           className=" "
         /> */}
-         <Slider />
+            <Slider />
+          </div>
+        </div>
       </div>
-      </div>
-    </div>
-  </section>
+    </section>
   )
 }

@@ -124,34 +124,6 @@ export default function Footer() {
                 Home
               </Link>
               <Link
-                href="#about"
-                className="text-white hover:text-primary"
-                style={{ fontFamily: "poppins" }}
-              >
-                About Us
-              </Link>
-              <Link
-                href="#services"
-                className="text-white hover:text-primary"
-                style={{ fontFamily: "poppins" }}
-              >
-                Services
-              </Link>
-              <Link
-                href="#doctors"
-                className="text-white hover:text-primary"
-                style={{ fontFamily: "poppins" }}
-              >
-                Our Doctors
-              </Link>
-              <Link
-                href="#blog"
-                className="text-white hover:text-primary"
-                style={{ fontFamily: "poppins" }}
-              >
-                Blog
-              </Link>
-              <Link
                 href="#contact"
                 className="text-white hover:text-primary"
                 style={{ fontFamily: "poppins" }}
@@ -223,15 +195,15 @@ export default function Footer() {
                 </a>
               </div>
               <div className="flex gap-2 mt-4">
-              <a href="https://play.google.com/store/apps/details?id=com.hellokompass.connect&pli=1" target="_blank">
+                <a href="https://play.google.com/store/apps/details?id=com.hellokompass.connect&pli=1" target="_blank">
                   <div>
-                <img src={app} alt="app store"  style={{width:'140px'}}></img>
-                </div>
-              </a>
-                <a href="https://apps.apple.com/us/app/kompass-connect/id6449901732?platform=iphone" target="_blank"> 
-                <div>
-                <img src={google} alt="google store" style={{width:'140px'}}></img>
-                </div>
+                    <img src={app} alt="app store" style={{ width: '140px' }}></img>
+                  </div>
+                </a>
+                <a href="https://apps.apple.com/us/app/kompass-connect/id6449901732?platform=iphone" target="_blank">
+                  <div>
+                    <img src={google} alt="google store" style={{ width: '140px' }}></img>
+                  </div>
                 </a>
               </div>
             </nav>

@@ -1,14 +1,6 @@
-"use client"
-
-import { useEffect, useState } from "react"
-import { ChevronLeft, ChevronRight, Mail, Phone, MapPin } from "lucide-react"
-import doctors1 from "../../../public/images/home/doctors/doctors1.jpeg";
-import doctors2 from "../../../public/images/home/doctors/doctors2.jpeg";
-import doctors3 from "../../../public/images/home/doctors/doctors3.jpeg";
-import doctors4 from "../../../public/images/home/doctors/doctors4.jpeg";
-import doctors5 from "../../../public/images/home/doctors/doctors5.jpeg";
 import axios from "axios";
-
+import { useEffect, useState } from "react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 
 export default function Doctors() {

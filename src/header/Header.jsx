@@ -16,7 +16,7 @@ export default function Header() {
 
 
   return (
-    <nav className="p-2 shadow-lg">
+    <nav className="py-5 shadow-lg">
 
       {/* Hamburger Button (md and smaller) */}
 
@@ -37,14 +37,10 @@ export default function Header() {
             <div key={index} className="relative">
               <div
                 onClick={() => handleToggle(index)}
-                className="cursor-pointer text-[#333] hover:text-[#7B1E19] capitalize pl-4 text-[18px] font-medium flex justify-between items-center"
+                className="cursor-pointer text-[#333] hover:text-[#7B1E19] capitalize pl-4 text-[16px] font-normal flex justify-between items-center"
                 style={{ fontFamily: "poppins" }}>
                 <Link to={page.path} className="font-poppins">{page.name}</Link>
-                {/* {page.children && (
-                  <span className="pl-2">
-                    {openIndex === index ? <ChevronUp /> : <ChevronDown />}
-                  </span>
-                )} */}
+
               </div>
 
               {/* Animated Submenu */}
