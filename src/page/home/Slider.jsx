@@ -37,7 +37,7 @@ export default function Slider() {
                         <img
                             src={src}
                             alt={`Slide ${index + 1}`}
-                            className="w-full h-[100%] object-cover"
+                            className="w-[100%]  object-cover"
                         />
                     </SwiperSlide>
                 ))}

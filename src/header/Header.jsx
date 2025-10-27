@@ -67,9 +67,9 @@ export default function Header() {
             </div>
           ))}
 
-          <div className=" flex justify-between items-center ml-4 rounded-2xl relative group cursor">
+          <div className=" flex justify-between items-center ml-4  relative group cursor">
             <a href="https://my.obesitybes.com/login" target="_blank" className="font-semibold  text-[14px] underline-none text-[#fff] " style={{ fontFamily: "poppins" }}>
-              <div className='flex gap-4 justify-end items-center h-auto border border-[#c2c1c1] px-10 py-2  rounded-[10px] bg-[#7B1E19]'>
+              <div className='flex gap-4 justify-end items-center h-auto border border-[#c2c1c1] px-10 py-2  rounded-[6px] bg-[#7B1E19]'>
                 <span>Sign In</span>
               </div>
             </a>

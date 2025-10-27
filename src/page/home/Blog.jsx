@@ -34,16 +34,16 @@ export default function Blog() {
     const fetchExperts = async () => {
       try {
         const res = await axios.get("https://api.obesitybes.com/public/api/newsletterview");
-        setHealth(res.data);   // save response data
+        setHealth(res.data);
       } catch (err) {
-        setError(err.message);  // handle error
+        setError(err.message);
       } finally {
-        setLoading(false);      // stop loading
+        setLoading(false);
       }
     };
 
     fetchExperts();
-  }, []); // run once on component mount
+  }, []);
 
   if (loading) return <p>Loading experts...</p>;
   if (error) return <p>Error: {error}</p>;
