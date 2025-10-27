@@ -30,7 +30,7 @@ export const routes = [
       {
         //   icon: <TableCellsIcon {...icon} />,
         name: "contact Us",
-        path: "/contactUs",
+        path: "/contact-us",
         element: <ContactUs />,
       },
 

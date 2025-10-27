@@ -117,18 +117,25 @@ export default function Footer() {
             <h3 className="text-lg font-bold">Quick Links</h3>
             <nav className="flex flex-col space-y-2">
               <Link
-                href="#"
+                to="/"
                 className="text-white hover:text-primary"
                 style={{ fontFamily: "poppins" }}
               >
                 Home
               </Link>
               <Link
-                href="#contact"
+                to="/contact-us"
                 className="text-white hover:text-primary"
                 style={{ fontFamily: "poppins" }}
               >
                 Contact
+              </Link>
+              <Link
+                to="/privacy"
+                className="text-white hover:text-primary"
+                style={{ fontFamily: "poppins" }}
+              >
+                Privacy
               </Link>
               <a
                 href="https://bes.org.bd/"
