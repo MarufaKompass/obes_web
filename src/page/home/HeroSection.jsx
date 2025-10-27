@@ -18,10 +18,10 @@ export default function HeroSection() {
               Your Healthy Journey Starts Here
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-              Transform Your Life with
-              <span className="text-primary-color font-[poppins]"> Expert Obesity Experts</span>
+              Transform Your Life By
+              <span className="text-primary-color font-[poppins]">  Obesity Experts</span>
             </h1>
-            <p className="text-md text-gray-600 md:text-lg font-[poppins] mt-4" >
+            <p className="text-md text-gray-600 md:text-lg font-[poppins] mt-4 font-normal" >
               Comprehensive, compassionate care for sustainable weight management. Our evidence-based approach helps you
               achieve lasting health improvements.
             </p>
