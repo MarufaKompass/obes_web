@@ -10,8 +10,8 @@ export default function HeroSection() {
 
           <div className="flex flex-col mt-[30px] lg:mt-[80px] space-y-4">
             <div className="text-center">
-              <h1 className="text-3xl lg:text-[45px] font-bold tracking-tight text-gray-900  pb-[30px] pt-[30px]  lg:leading-[55px]">
-                <span className="text-primary-color font-[poppins]">Bangladesh Endocrine Society</span><spna> Obesity Taskforce</spna></h1>
+              <h1 className="text-3xl lg:text-[55px] font-bold tracking-tight text-gray-900  pb-[30px] pt-[30px]  lg:leading-[55px]">
+                <span className="text-primary-color font-[poppins]">Bangladesh Endocrine Society</span><span> Obesity Taskforce</span></h1>
             </div>
             <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-primary-color" style={{ backgroundColor: 'rgba(123, 30, 25, 0.3)' }}>
               <Heart className="h-4 w-4" />
