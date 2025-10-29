@@ -43,24 +43,44 @@ export default function Doctors() {
           navigation
           pagination={{ clickable: true }}
           breakpoints={{
-            320: { slidesPerView: 1 },
-            500: { slidesPerView: 2 },
-            768: { slidesPerView: 3 },
-            1024: { slidesPerView: 5 },
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 15,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 25,
+            },
+            1324: {
+              slidesPerView: 4,
+              spaceBetween: 25,
+            },
+            1524: {
+              slidesPerView: 5,
+              spaceBetween: 25,
+            },
           }}
         >
           {experts.map((emp) => (
             <SwiperSlide key={emp.id}>
-              <div className="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition-shadow duration-300 h-[500px]">
+              <div className="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition-shadow duration-300 h-[500px] md:h-[500px] px-4 ">
                 <div className="relative">
                   <img
                     src={emp.drimg}
                     alt={emp.drname}
-                    className="w-full md:h-[300px] h-[400px] object-cover"
+                    className="w-full md:h-[300px] h-[300px] object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                 </div>
-                <div className="p-4">
+                <div className="p-4 ">
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">
                     {emp.drname}
                   </h3>

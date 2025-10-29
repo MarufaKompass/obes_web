@@ -26,7 +26,6 @@ export default function Blog() {
   ]
 
   const [health, setHealth] = useState(null);
-  console.log("health", health?.data)
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
