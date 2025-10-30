@@ -6,13 +6,14 @@ import obesity2 from "../../../public/images/home/obesity2.png";
 import obesity3 from "../../../public/images/home/obesity3.png";
 import obesity4 from "../../../public/images/home/obesity4.png";
 import obesity5 from "../../../public/images/home/obesity5.png";
+import obesity6 from "../../../public/images/home/obesity6.png";
 
 import "./slider.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const images = [obesity1, obesity2, obesity3, obesity4, obesity5];
+const images = [obesity1, obesity2, obesity3, obesity4, obesity5, obesity6];
 
 export default function Slider() {
     return (
