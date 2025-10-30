@@ -21,7 +21,7 @@ export default function HeroSection() {
                 </p>
               </div>
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-                Transform Your Life Withjhe
+                Transform Your Life With
                 <span className="text-primary-color font-[poppins]">  Obesity Experts</span>
               </h1>
               <p className="text-md text-gray-600 md:text-lg font-[poppins] mt-4 font-normal" >
