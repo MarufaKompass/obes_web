@@ -10,11 +10,11 @@ export default function Home() {
     <div>
       <HeroSection></HeroSection>
       <HealthChecklist></HealthChecklist>
-      <Doctors></Doctors>
+      {/* <Doctors></Doctors>
       <Health></Health>
       <HealthCare></HealthCare>
       <Impact></Impact>
-      <Blog></Blog>
+      <Blog></Blog> */}
     </div>
   );
 }

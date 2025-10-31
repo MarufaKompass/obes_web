@@ -28,11 +28,13 @@ export default function Slider() {
             >
                 {images.map((src, index) => (
                     <SwiperSlide key={index} className="flex justify-center items-center">
-                        <img
-                            src={src.src || src}
-                            alt={`Slide ${index + 1}`}
-                            className="w-full h-auto object-cover rounded-xl shadow-md"
-                        />
+                        <div className="flex justify-center items-center">
+                            <img
+                                src={src.src || src}
+                                alt={`Slide ${index + 1}`}
+                                className=""
+                            />
+                        </div>
                     </SwiperSlide>
                 ))}
             </Swiper>

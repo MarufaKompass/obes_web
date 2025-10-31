@@ -11,7 +11,7 @@ const healthSteps = [
   { id: 3, title: "3 Main Meals", description: "Do not skip meals", icon: UtensilsCrossed, color: "from-green-400 to-emerald-500", bgColor: "bg-green-50", textColor: "text-green-700" },
   { id: 4, title: "4 Pillars of Treatment", description: "Focus on mental and physical wellness", icon: Heart, color: "from-rose-400 to-pink-500", bgColor: "bg-rose-50", textColor: "text-rose-700" },
   { id: 5, title: "5 Portions Fruits & Vegetables", description: "Colorful nutrition for optimal health", icon: Apple, color: "from-lime-400 to-green-500", bgColor: "bg-lime-50", textColor: "text-lime-700" },
-  { id: 6, title: "6-8 Hours of Sleep", description: "Quality rest for recovery and growth", icon: Moon,color: "from-gray-700 to-gray-900", bgColor: "bg-indigo-50", textColor: "text-indigo-700" },
+  { id: 6, title: "6-8 Hours of Sleep", description: "Quality rest for recovery and growth", icon: Moon, color: "from-gray-700 to-gray-900", bgColor: "bg-indigo-50", textColor: "text-indigo-700" },
 ]
 
 export default function HealthChecklist() {
@@ -25,13 +25,13 @@ export default function HealthChecklist() {
   }
 
   return (
-    <div className="min-h-screen py-24">
+    <div className=" py-24">
       {/* Decorative background */}
-      <div className="absolute inset-0 pointer-events-none">
+      {/* <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-200/30 to-purple-200/30 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-pink-200/30 to-orange-200/30 rounded-full blur-3xl"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-green-200/20 to-blue-200/20 rounded-full blur-3xl"></div>
-      </div>
+      </div> */}
 
       <div className="relative md:container mx-auto lg:px-0 px-6">
         {/* Header */}
@@ -70,9 +70,8 @@ export default function HealthChecklist() {
             return (
               <div
                 key={step.id}
-                className={`cursor-pointer overflow-hidden rounded-xl shadow-md transition-all duration-300 border border-[#DEDEDE] ${
-                  isCompleted ? "ring-2 ring-[#7B1E19]" : "hover:shadow-xl"
-                }`}
+                className={`cursor-pointer overflow-hidden rounded-xl shadow-md transition-all duration-300 border border-[#DEDEDE] ${isCompleted ? "ring-2 ring-[#7B1E19]" : "hover:shadow-xl"
+                  }`}
                 onMouseEnter={() => setHoveredStep(step.id)}
                 onMouseLeave={() => setHoveredStep(null)}
                 onClick={() => toggleStep(step.id)}

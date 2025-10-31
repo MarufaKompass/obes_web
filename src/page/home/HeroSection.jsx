@@ -4,8 +4,8 @@ import { Heart, ArrowRight } from "lucide-react"
 import Slider from "./Slider";
 export default function HeroSection() {
   return (
-    <section className="w-full  bg-[#fbfbfb]">
-      <div className="md:container mx-auto px-4 md:px-6">
+    <section className="w-full  ">
+      <div className="md:container mx-auto px-4 md:px-0">
         <div className="grid gap-10 lg:gap-10 lg:grid-cols-2 grid-cols-1">
 
           <div className="flex items-center">
