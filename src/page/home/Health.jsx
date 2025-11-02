@@ -12,7 +12,6 @@ export default function Health() {
             className="w-[90%] "
           />
           <div className="flex flex-col justify-center space-y-4">
-            {/* <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary" style={{ fontFamily: 'poppins' }}>About Us</div> */}
             <h2 className="text-[22px] font-semibold tracking-tighter md:text-4xl font-[poppins]" >A Medical Condition, Not a Choice</h2>
             <p className="text-muted-foreground md:text-[16px] font-[poppins]" >
               Obesity affects over 650 million adults worldwide and is recognized by medical organizations as a
