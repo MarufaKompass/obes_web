@@ -7,7 +7,7 @@ import {
 const healthSteps = [
   { id: 0, title: "0 Sugary Drinks", description: "Reduce intake of sodas and sweetened beverages", icon: Coffee, color: "from-orange-400 to-red-500", bgColor: "bg-orange-50", textColor: "text-orange-700" },
   { id: 1, title: "1+ Hour Physical Exercise", description: "Daily movement keeps your body strong", icon: Dumbbell, color: "from-blue-400 to-cyan-500", bgColor: "bg-blue-50", textColor: "text-blue-700" },
-  { id: 2, title: "2 or Less Screen Time", description: "Take breaks from digital devices", icon: Smartphone, color: "from-purple-400 to-pink-500", bgColor: "bg-purple-50", textColor: "text-purple-700" },
+  { id: 2, title: "2 or Less hours Screen Time", description: "Take breaks from digital devices", icon: Smartphone, color: "from-purple-400 to-pink-500", bgColor: "bg-purple-50", textColor: "text-purple-700" },
   { id: 3, title: "3 Main Meals", description: "Do not skip meals", icon: UtensilsCrossed, color: "from-green-400 to-emerald-500", bgColor: "bg-green-50", textColor: "text-green-700" },
   { id: 4, title: "4 Pillars of Treatment", description: "Focus on mental and physical wellness", icon: Heart, color: "from-rose-400 to-pink-500", bgColor: "bg-rose-50", textColor: "text-rose-700" },
   { id: 5, title: "5 Portions Fruits & Vegetables", description: "Colorful nutrition for optimal health", icon: Apple, color: "from-lime-400 to-green-500", bgColor: "bg-lime-50", textColor: "text-lime-700" },
