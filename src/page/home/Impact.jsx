@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
 export default function Impact() {
-  const data2 = [
-    { value: "5,000+", label: "Registered user" },
-    { value: "92%", label: "Success Rate" },
-    { value: "15+", label: "Certified Specialists" },
-    { value: "10", label: "Years of Experience" },
-  ]
+  // const data2 = [
+  //   { value: "5,000+", label: "Registered user" },
+  //   { value: "92%", label: "Success Rate" },
+  //   { value: "15+", label: "Certified Specialists" },
+  //   { value: "10", label: "Years of Experience" },
+  // ]
 
 
   const [data, setData] = useState(null);
